@@ -1,140 +1,17 @@
-/* Namari Landing Page v.1.1.0 Style Index - a free landing page by shapingrain.com
-
-1. Default and Reset styles
-- 1.1 Input Elements
-2. Global elements
-- 2.1 Header
-- 2.2 Logo
-- 2.3 Buttons
-- 2.4 Navigation
-- 2.5 Social Elements
-- 2.6 Images
-3. Fonts and Headings
-4. Banner
-- 4.1 SignUp Form
-5. Content Elements
-- 5.1 Icons
-- 5.2 Parallax Elements
-- 5.3 Divider
-6. Landing Page Sections
-- 6.1 Features
-- 6.2 Testimonials
-- 6.3 Gallery
-- 6.4 Video
-- 6.5 Clients
-- 6.6 Pricing Table
-7. Footer
-
-
-/*------------------------------------------------------------------------------------------*/
-/* 1. Defaults & Reset of specific styles across browsers */
-/*------------------------------------------------------------------------------------------*/
-
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote, th, td {
-    margin: 0;
-    padding: 0;
-    direction: ltr;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-}
-
-p {
-    line-height: 25px;
-}
-
-.row img {
-    height: auto;
-    max-width: 100%;
-}
-
-a {
-    text-decoration: none;
-    line-height: inherit;
-    -webkit-transition: opacity 0.3s ease-out;
-    -moz-transition: opacity 0.3s ease-out;
-    -o-transition: opacity 0.3s ease-out;
-    transition: opacity 0.3s ease-out;
-}
-
-iframe {
-    border: 0 !important;
-}
-
-.parallax-window {
-    min-height: 400px;
-    background: transparent;
-}
-
-figure {
-    margin: 0;
-}
-
-/* Page Border */
-
-.page-border {
-    position: fixed;
-    z-index: 999999;
-    pointer-events: none;
-}
-
-.page-border .bottom-border, .page-border .left-border, .page-border .right-border, .page-border .top-border {
-    background: #f3f3ef;
-    position: fixed;
-    z-index: 9999;
-}
-
-.page-border > .top-border, .page-border > .right-border, .page-border > .bottom-border, .page-border > .left-border {
-    padding: 11px;
-    background: #ccc;
-}
-
-.page-border .bottom-border, .page-border .top-border {
-    width: 100%;
-    padding: 10px;
-    left: 0;
-}
-
-.page-border .left-border, .page-border .right-border {
-    padding: 10px;
-    height: 100%;
-    top: 0;
-}
-
-.page-border .top-border {
-    top: 0;
-}
-
-.page-border .right-border {
-    right: 0;
-}
-
-.page-border .bottom-border {
-    bottom: 0;
-}
-
-.page-border .left-border {
-    left: 0;
-}
-
-#wrapper {
-    margin:0 15px;
-    padding: 15px 0;
-    position: relative;
-}
-
-
 /* --------- 1.1 Input Elements ---------- */
+
+:root {
+    --base-color: 
+    --background-color:
+    --text-color: 
+}
+
+/*
+:darkmode {
+    --base-color: 
+    --background-color: 
+    --text-color: 
+} */
 
 input, textarea {
     border: 1px solid #e1e1e1;
@@ -353,7 +230,8 @@ section {
 }
 
 #logo img {
-    max-height: 22px;
+    /* max-height: 22px; */
+    height: 100%;
     vertical-align: middle;
     margin-right: 15px;
 }
@@ -1396,8 +1274,7 @@ blockquote {
 .client-overlay {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top;
-    0;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
@@ -1557,15 +1434,16 @@ blockquote {
 
 /*Preloader*/
 
+/*
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff; /* change if the mask should have another color then white */
-    z-index: 99999; /* makes sure it stays on top */
-}
+    background-color: #fff;     /* change if the mask should have another color then white 
+    z-index: 99999;     /* makes sure it stays on top 
+} */
 
 #status {
     width: 110px;
