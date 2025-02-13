@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     <!--Page Title-->
-    <title>Namari - Free Landing Page Template</title>
+    <title>Maciej Müller</title>
 
     <!--Meta Keywords and Description-->
     <meta name="keywords" content="">
@@ -12,19 +12,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="images/M-logo-M.ico" title="Favicon"/>
-
-    <!-- Main CSS Files -->
-    <link rel="stylesheet" href="css/reset_styles.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/M-logo-M.ico" title="MasiaSaig"/>
 
     <!-- Namari Color CSS -->
     <link rel="stylesheet" href="css/namari-color.css">
 
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/reset_styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/style_1024.css">
+    <link rel="stylesheet" href="css/style_767.css">
+    <link rel="stylesheet" href="css/style_480.css">
+
     <!--Icon Fonts - Font Awesome Icons-->
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/brands.min.css">
+    <link rel="stylesheet" href="css/solid.min.css">
+
 
     <!-- Animate CSS-->
     <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -33,27 +38,27 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<!-- 
-    
+
+<!--  
 TODO: 
 - remove font-awesome.min.css and its resources fontawesome-webfont*
 - analize what Preloader is
 - change logo to png with alpha channel
-
+- zmień scieżki dmuchawcow zeby wczesniej sie konczyły
+- usuń niepotrzebne style i inne zasoby js
 -->
 
-
 <!-- Preloader -->
-<!-- <div id="preloader">
+<div id="preloader">
     <div id="status" class="la-ball-triangle-path">
         <div></div>
         <div></div>
         <div></div>
     </div>
-</div> -->
+</div>
 <!--End of Preloader-->
 
-<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+<div id="border" class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
     <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
     <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
     <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
@@ -61,8 +66,8 @@ TODO:
 </div>
 
 <div id="wrapper">
-
-    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+    <!-- data-enllax-ratio=".5" -->
+    <header id="banner" class="clearfix" >
         <div id="header" class="nav-collapse">
             <div class="row clearfix">
                 <div class="col-1">
@@ -109,26 +114,26 @@ TODO:
                     <nav id="nav-main">
                         <ul>
                             <li>
-                                <a href="#banner">Home</a>
+                                <a href="#home">Home</a>
                             </li>
                             <li>
                                 <a href="#about">About</a>
                             </li>
                             <li>
-                                <a href="#gallery">Gallery</a>
+                                <a href="#experience">Experience</a>
                             </li>
                             <li>
-                                <a href="#services">Services</a>
+                                <a href="#skills">Skills</a>
                             </li>
                             <li>
-                                <a href="#testimonials">Testimonials</a>
+                                <a href="#projects">Projects</a>
                             </li>
-                            <li>
-                                <a href="#clients">Clients</a>
-                            </li>
-                            <li>
-                                <a href="#pricing">Pricing</a>
-                            </li>
+                            <!-- <li>
+                                <a href="#hobbies">Hobbies</a>
+                            </li> -->
+                            <!-- <li>
+                                <a href="#contact">Contact Me</a>
+                            </li> -->
                         </ul>
                     </nav>
                     <!--End of Main Navigation-->
@@ -141,407 +146,360 @@ TODO:
         </div><!--End of Header-->
 
         <!--Banner Content-->
-        <div id="banner-content" class="row clearfix">
+        <!-- data-enllax-ratio=".5" -->
+        <div id="home" class="row clearfix scrollto" >
+            
+            <img id="dandelions-background" src="images/background-images/dandelion-more.png">
 
-            <div class="col-38">
+             <!-- <div class="col-38"> -->
+                <!--Call to Action-->
+                <!-- <a href="#" class="button">START CREATING TODAY</a> -->
+                <!--End Call to Action-->
+            <!-- </div> -->
 
-                <div class="section-heading">
-                    <h1>A FREE AND SIMPLE LANDING PAGE</h1>
-                    <h2>Namari is a free landing page template you can use for your projects. It is free to use for your
-                        personal and commercial projects, enjoy!</h2>
+            <div id="headline">
+                <div id="banner-headline" class="section-heading">
+                    <h1>Maciej Müller</h1>
+                    <h2>Third year student at AGH University of Science and Technology studying Applied Computer Science.</h2>
                 </div>
 
-                <!--Call to Action-->
-                <a href="#" class="button">START CREATING TODAY</a>
-                <!--End Call to Action-->
+                <div class="bottom-right">
+                <div id="dandelions" style="margin-right: 0px; margin-left: auto;">
+                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                        <path id="pappus-path1" d="M690 280Q451 187-218 173" fill="transparent"/>
+                    </svg>
+                    <div id="pappus-wrap1" class="pappus-wrapper"> <img id="pappus1" src="images/background-images/pappus1.png"> </div>
 
+                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                        <path id="pappus-path2" d="M800 100q-193-9-305 52-67 38-236 25-218-16-488 113" fill="transparent"/>
+                    </svg>
+                    <div id="pappus-wrap2" class="pappus-wrapper"> <img id="pappus2" src="images/background-images/pappus2.png"> </div>
+                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                        <path id="pappus-path3" d="M615 380Q375 271-218 460" fill="transparent"/>
+                    </svg>
+                    <div id="pappus-wrap3" class="pappus-wrapper"> <img id="pappus3" src="images/background-images/pappus3.png"> </div>
+                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                        <path id="pappus-path4" d="M845 320Q683 212-280 350" fill="transparent"/>
+                    </svg>
+                    <div id="pappus-wrap4" class="pappus-wrapper"> <img id="pappus4" src="images/background-images/pappus2.png"> </div>
+                </div>
+                </div>
             </div>
 
-        </div><!--End of Row-->
+        </div>
+       
     </header>
+
 
     <!--Main Content Area-->
     <main id="content">
+        <!--About Content Section-->
+        <div id="about" class="row clearfix scrollto" tabindex="-1">
 
-        <!--Introduction-->
-        <section id="about" class="introduction scrollto">
-
-            <div class="row clearfix">
-
-                <div class="col-3">
-                    <div class="section-heading">
-                        <h3>SUCCESS</h3>
-                        <h2 class="section-title">How We Help You To Sell Your Product</h2>
-                        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
-                    </div>
-
+        <div class="section-padding">
+            <div class="section-heading">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <p>I am a third year student at AGH University of Science and Technology studying Applied Computer Science. 
+                I am a programmer, who is interested mostly in application and web developement, also embedded systems, 
+                to which I got introduced recently at collage. 
+            </p>
+            <p>
+                I belive, that a person should strive to live a life without regret, to make most of their time and choose
+                best decisions possible. That is why, I like to organize my time. Focusing fully on what I do at the moment, 
+                either working, studying or relaxing.
+            </p>
+            <div id="timeline" class="">
+                <div id="timeline-buttons" class="">
+                    <a id="historyButton" class="button">History</a>
+                    <a id="presentButton" class="button">Present</a>
+                    <a id="plansButton" class="button">Plans</a>
                 </div>
 
-                <div class="col-2-3">
+                <div id="timeperiods">
+                    <div id="past" class="timeperiod section-heading text-center" style="visibility: visible; opacity: 1;">
+                        <p>I began my programming journey, with Python. I was mainly solving some simple problems on a phone application. It 
+                            was not so entertaining to me at moment, but it kept me busy between breaks in middle school.</p>
+                        <p>Later in technical school, I learnt basics of C++ mixed with C. At first I did not like it, but with time I was 
+                            favouring it more and more and soon C++ became my favorite programming language. With it, we did some 
+                            introductions to algorythms and their concepts.
+                        </p>
+                        <p>Other than that, I also got introduced to developing websited using HTML, CSS, JavaScript and later PHP with SQL.
+                            Learning all those stuff at the same time, was interesting and being able to create my own website, than adding 
+                            some cool effects and finally making it more advanced by manipulating database was very satisfying.</p>
+                    </div>
+                    <div id="present" class="timeperiod section-heading text-center" style="visibility: hidden; opacity: 0; transform: translateY(100%);">
+                        
+                        <p>Currently I am an applied computer science student at AGH University of Science and Technology and an intern at 
+                            Leading Devices.</p>
+                        <p>In my free time, I also program some simple programs while trying to learn new technologies. </p>
+                    </div>
+                    <div id="future" class="timeperiod section-heading text-center" data-wow-delay="0.2s" style="visibility: hidden; opacity: 0; transform: translateX(100%);">
+                        
+                        <p>In the Future I am planning on learning more about embedded systems, tools used to develop them and electronics 
+                            with commonly used interfaces and their standards, to be able to create more advanced things.</p>
+                    </div>
+                </div>
+            </div>
 
-                    <!--Icon Block-->
+            <!-- <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i></a> -->
+        </div>
+
+        </div>
+    <!--End of About Content Section-->
+
+    <!--Skills Content Section-->
+    <section id="skills" class="introduction scrollto" tabindex="-1">
+
+        <div class="row clearfix">
+            <div class="col-3">
+                <div class="section-heading">
+                    <h2 class="section-title">Skills</h2>
+                    <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!
+                    </p>
+
+                    <h3>Other Skills</h3>
+                    <div id="other-skills">
+                        <img src="images/skills-images/matlab.svg" alt="MATLAB"> 
+                        <img src="images/skills-images/overleaf.svg" alt="Overleaf"> 
+                        <i class="fa-brands fa-git-alt fa-2x" style="color: #f05030"></i>
+                        <img src="images/skills-images/mysql.svg" alt="MySQL"> 
+                        <img src="images/skills-images/postgresql.svg" alt="PostgreSQL"> 
+                        <img src="images/skills-images/linux.svg" alt="Linux"> 
+                        <img src="images/skills-images/qt.svg" alt="QT"> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2-3">
+
+                <div class="col-1">
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/c.svg" alt="C"/>
+                        <div class="skill-overlay"><span>C</span></div>
+                    </div>
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/cpp.svg" alt="C++"/>
+                        <div class="skill-overlay"><span>C++</span></div>
+                    </div>
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/html.svg" alt="HTML"/>
+                        <div class="skill-overlay"><span>HTML</span></div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/css.svg" alt="CSS"/>
+                        <div class="skill-overlay"><span>CSS</span></div>
+                    </div>
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/javascript.svg" alt="JavaScript"/>
+                        <div class="skill-overlay"><span>JavaScript</span></div>
+                    </div>
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/java.svg" alt="Java"/>
+                        <div class="skill-overlay"><span>Java</span></div>
+                    </div>
+                </div>  
+                <div class="col-1">
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/php.svg" alt="PHP"/>
+                        <div class="skill-overlay"><span>PHP</span></div>
+                    </div>
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/python.svg" alt="Python"/>
+                        <div class="skill-overlay"><span>Python</span></div>
+                    </div>
+                    <div class="col-3 skill">
+                        <img src="images/skills-images/sql.svg" alt="SQL"/>
+                        <div class="skill-overlay"><span>SQL</span></div>
+                    </div>
+                </div>  
+
+            </div>
+
+
+
+
+
+
+            <!-- <div class="col-2-3"> -->
+                <!-- C, C++ -->
+                <!-- <div class="col-1">
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                        <!--Icon-->
                         <div class="icon">
-                            <i class="fa fa-html5 fa-2x"></i>
+                            <img src="images/skills-images/c.svg" alt="C" style="height: 30.5px;">
                         </div>
-                        <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>HTML5 &amp; CSS3</h4>
+                            <h4>C</h4>
+                            <p>Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro
+                                nemore vivendum</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon">
+                            <img src="images/skills-images/cpp.svg" alt="C++" style="height: 30.5px;">
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>C++</h4>
+                            <p>Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro
+                                nemore vivendum</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- HTML, CSS, JavaScript -->
+                <!-- <div class="col-1">
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <i class="fa-brands fa-html5 fa-2x"></i>
+                            <i class="fa-brands fa-css3 fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>HTML &amp; CSS</h4>
                             <p>Has ne tritani atomorum conclusionemque, in dolorum volumus cotidieque eum. At vis choro
                                 neglegentur iudico</p>
                         </div>
                     </div>
-                    <!--End of Icon Block-->
 
-                    <!--Icon Block-->
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
-                        <!--Icon-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.4s">
                         <div class="icon">
-                            <i class="fa fa-bolt fa-2x"></i>
+                            <i class="fa-brands fa-js fa-2x"></i>
                         </div>
-                        <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>Easy to Use</h4>
+                            <h4>JavaScript</h4>
                             <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
                                 detracto mediocrem disputationi</p>
                         </div>
                     </div>
-                    <!--End of Icon Block-->
+                </div> -->
 
-                    <!--Icon Block-->
+                <!-- Java, PHP -->
+                <!-- <div class="col-1">
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
-                        <!--Icon-->
                         <div class="icon">
-                            <i class="fa fa-tablet fa-2x"></i>
+                            <i class="fa-brands fa-java fa-2x"></i>
                         </div>
-                        <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>Fully Responsive</h4>
-                            <p>Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro
-                                nemore vivendum</p>
+                            <h4>Java</h4>
+                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
+                                detracto mediocrem disputationi</p>
                         </div>
                     </div>
-                    <!--End of Icon Block-->
-
-                    <!--Icon Block-->
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
-                        <!--Icon-->
+                    
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.6s">
                         <div class="icon">
-                            <i class="fa fa-rocket fa-2x"></i>
+                            <i class="fa-brands fa-php fa-2x"></i>
                         </div>
-                        <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>Parallax Effect</h4>
-                            <p>Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro
-                                nemore vivendum</p>
+                            <h4>PHP</h4>
+                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
+                                detracto mediocrem disputationi</p>
                         </div>
                     </div>
-                    <!--End of Icon Block-->
+                </div> -->
 
-                </div>
-
-            </div>
-
-
-        </section>
-        <!--End of Introduction-->
-
-
-        <!--Gallery-->
-        <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-                 data-featherlight-filter="a">
-
-                <a href="images/gallery-images/gallery-image-1.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.1s"><img src="images/gallery-images/gallery-image-1.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-2.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.3s"><img src="images/gallery-images/gallery-image-2.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-3.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.5s"><img src="images/gallery-images/gallery-image-3.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-4.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="1.1s"><img src="images/gallery-images/gallery-image-4.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-5.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.9s"><img src="images/gallery-images/gallery-image-5.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-6.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.7s"><img src="images/gallery-images/gallery-image-6.jpg" alt="Landing Page"/></a>
-
-        </aside>
-        <!--End of Gallery-->
-
-
-        <!--Content Section-->
-        <div id="services" class="scrollto clearfix">
-
-            <div class="row no-padding-bottom clearfix">
-
-
-                <!--Content Left Side-->
-                <div class="col-3">
-                    <!--User Testimonial-->
-                    <blockquote class="testimonial text-right bigtest">
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore
-                            et dolore magna aliqua</q>
-                        <footer>— John Doe, Happy Customer</footer>
-                    </blockquote>
-                    <!-- End of Testimonial-->
-
-                </div>
-                <!--End Content Left Side-->
-
-                <!--Content of the Right Side-->
-                <div class="col-3">
-                    <div class="section-heading">
-                        <h3>BELIEVING</h3>
-                        <h2 class="section-title">Focusing On What Matters Most</h2>
-                        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                <!-- Python, Qt  -->
+                <!-- <div class="col-1">
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="icon">
+                            <i class="fa-brands fa-python fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>Python</h4>
+                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
+                                detracto mediocrem disputationi</p>
+                        </div>
                     </div>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <p>
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet!
-                    </p>
-                    <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
-                    <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
-                        WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <!--End Content Right Side-->
 
-                <div class="col-3">
-                    <img src="images/dancer.jpg" alt="Dancer"/>
-                </div>
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="icon">
+                            <img src="images/skills-images/qt.svg" alt="Qt" style="height: 30.5px;">
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>Qt QML</h4>
+                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
+                                detracto mediocrem disputationi</p>
+                        </div>
+                    </div>
+                </div> -->
 
-            </div>
+                <!-- SQL -->
+                <!-- <div class="col-1">
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="icon">
+                            <i class="fa fa-database fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>SQL</h4>
+                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
+                                detracto mediocrem disputationi</p>
+                        </div>
+                    </div>
+                </div> -->
 
+                
+
+            <!-- </div> -->
 
         </div>
-        <!--End of Content Section-->
 
-        <!--Testimonials-->
-        <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
+    </section>
+    <!--End of Skills Content Section-->
 
-            <div class="row clearfix">
+    <!--Projects-->
+    <!-- data-enllax-ratio=".2" -->
+    <section id="projects" class="text-center scrollto secondary-color" >
 
-                <div class="section-heading">
-                    <h3>FEEDBACK</h3>
-                    <h2 class="section-title">What our customers are saying</h2>
-                </div>
+        <div class="row clearfix">
 
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-1.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe - Happy Customer</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-2.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>Roslyn Doe - Happy Customer</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-3.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>Thomas Doe - Happy Customer</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
+            <div class="section-heading">
+                <h2 class="section-title">Projects</h2>
             </div>
 
-        </aside>
-        <!--End of Testimonials-->
-
-        <!--Clients-->
-        <section id="clients" class="scrollto clearfix">
-            <div class="row clearfix">
-
-                <div class="col-3">
-
-                    <div class="section-heading">
-                        <h3>TRUST</h3>
-                        <h2 class="section-title">Companies who use our services</h2>
-                        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
-                    </div>
-
+            <div style="display: flex; width: 100%; height: fit-content; align-items: stretch; ">
+                <div class="project classic">
+                    <img src="images/projects-images/stowarzyszenie_okocim_od_serca.png" alt="Stowarzyszenie Okocim od Serca"/>
+                    <p class="project-description">
+                        Simple website for local association, that I made together with my brother, using HTML, CSS, JS and PHP .</p>
+                    <footer><a href="https://okocimodserca.pl/">Okocim od Serca</a></footer>
                 </div>
 
-                <div class="col-2-3">
-
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo1.png" alt="Company"/>
-                        <div class="client-overlay"><span>Tree</span></div>
-                    </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo2.png" alt="Company"/>
-                        <div class="client-overlay"><span>Fingerprint</span></div>
-                    </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo3.png" alt="Company"/>
-                        <div class="client-overlay"><span>The Man</span></div>
-                    </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo4.png" alt="Company"/>
-                        <div class="client-overlay"><span>Mustache</span></div>
-                    </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo5.png" alt="Company"/>
-                        <div class="client-overlay"><span>Goat</span></div>
-                    </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo6.png" alt="Company"/>
-                        <div class="client-overlay"><span>Justice</span></div>
-                    </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo7.png" alt="Company"/>
-                        <div class="client-overlay"><span>Ball</span></div>
-                    </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo8.png" alt="Company"/>
-                        <div class="client-overlay"><span>Cold</span></div>
-                    </a>
-
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo9.png" alt="Company"/>
-                        <div class="client-overlay"><span>Cold</span></div>
-                    </a>
-
+                <div class="project classic">
+                    <img src="images/projects-images/krzywe_lissajousa.png" alt="Lissajous Curve"/>
+                    <p class="project-description">Embedded systems program, made I created together with friend from collage. 
+                        It is an implementation of a PID, that controlls small heater made of resistor.</p>
+                    <footer><a href="https://github.com/MasiaSaig/TempReg">Temperature Regulator</a></footer>
                 </div>
 
+                <div class="project classic">
+                    <img src="images/projects-images/temperature_regulator.png" alt="Temperature Regulator"/>
+                    <p class="project-description">Another project made with two of my collagues from AGH. 
+                        It draws three-dimensional Lissajous curves in Cartesian and/or polar coordinates. </p>
+                    <footer><a href="https://github.com/MasiaSaig/Projekt_Krzywe_Lissajous_3D">3D Lissajous Curve</a></footer>
+                </div>
             </div>
-        </section>
-        <!--End of Clients-->
+            <p> Rest of my project, can be found on my <a href="https://github.com/MasiaSaig?tab=repositories">github page</a>. </p>
+        </div>
 
-        <!--Pricing Tables-->
-        <section id="pricing" class="secondary-color text-center scrollto clearfix ">
-            <div class="row clearfix">
-
-                <div class="section-heading">
-                    <h3>YOUR CHOICE</h3>
-                    <h2 class="section-title">We have the right package for you</h2>
-                </div>
-
-                <!--Pricing Block-->
-                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="pricing-block-content">
-                        <h3>Personal</h3>
-                        <p class="pricing-sub">The standard version</p>
-                        <div class="pricing">
-                            <div class="price"><span>$</span>19</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                        <ul>
-                            <li>5 Downloads</li>
-                            <li>2 Extensions</li>
-                            <li>Tutorials</li>
-                            <li>Forum Support</li>
-                            <li>1 year free updates</li>
-                        </ul>
-                        <a href="#" class="button">BUY TODAY</a>
-                    </div>
-                </div>
-                <!--End Pricing Block-->
-
-                <!--Pricing Block-->
-                <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="pricing-block-content">
-                        <h3>Student</h3>
-                        <p class="pricing-sub">Most popular choice</p>
-                        <div class="pricing">
-                            <div class="price"><span>$</span>29</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                        <ul>
-                            <li>15 Downloads</li>
-                            <li>5 Extensions</li>
-                            <li>Tutorials with Files</li>
-                            <li>Forum Support</li>
-                            <li>2 years free updates</li>
-                        </ul>
-                        <a href="#" class="button">BUY TODAY</a>
-                    </div>
-                </div>
-                <!--End Pricing Block-->
-
-                <!--Pricing Block-->
-                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="pricing-block-content">
-                        <h3>Business</h3>
-                        <p class="pricing-sub">For the whole team</p>
-                        <div class="pricing">
-                            <div class="price"><span>$</span>49</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                        <ul>
-                            <li>Unlimited Downloads</li>
-                            <li>Unlimited Extensions</li>
-                            <li>HD Video Tutorials</li>
-                            <li>Chat Support</li>
-                            <li>Lifetime free updates</li>
-                        </ul>
-                        <a href="#" class="button">BUY TODAY</a>
-                    </div>
-                </div>
-                <!--End Pricing Block-->
-
-            </div>
-        </section>
-        <!--End of Pricing Tables-->
+    </aside>
+    <!--End of Projects-->
 
     </main>
-    <!--End Main Content Area-->
-
 
     <!--Footer-->
     <footer id="landing-footer" class="clearfix">
         <div class="row clearfix">
 
-            <p id="copyright" class="col-2">Made with love by <a href="https://www.shapingrain.com">ShapingRain</a></p>
+            <p id="copyright" class="col-2">You can contact me on: mullermaciej12@gmail.com</p>
 
             <!--Social Icons in Footer-->
             <ul class="col-2 social-icons">
                 <li>
-                    <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
-                        <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" title="Google+" href="http://google.com/+username">
-                        <i class="fa fa-google-plus fa-1x"></i><span>Google+</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
-                        <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
-                        <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
-                    </a>
-                </li>
-                <li>
                     <a target="_blank" title="behance" href="http://www.behance.net">
-                        <i class="fa fa-behance fa-1x"></i><span>Behance</span>
+                        <i class="fa-solid fa-envelope fa-1x"></i><span>email</span>
                     </a>
                 </li>
             </ul>
@@ -556,8 +514,8 @@ TODO:
 <script src="js/jquery.1.8.3.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/featherlight.min.js"></script>
-<script src="js/featherlight.gallery.min.js"></script>
-<script src="js/jquery.enllax.min.js"></script>
+<!-- <script src="js/featherlight.gallery.min.js"></script> -->
+<!-- <script src="js/jquery.enllax.min.js"></script> -->
 <script src="js/jquery.scrollUp.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.stickyNavbar.min.js"></script>
@@ -566,6 +524,8 @@ TODO:
 <script src="js/lightbox.min.js"></script>
 <script src="js/site.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="js/skrypt.js"></script>
 
 </body>
 </html>

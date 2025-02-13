@@ -1,50 +1,51 @@
-/* Namari Landing Page Dynamic Style Index
-
-1. Website Default Styling
-2. Navigation
-3. Primary and Secondary Colors
-4. Banner
-5. Typography
-6. Buttons
-7. Footer
-
-
 /*------------------------------------------------------------------------------------------*/
 /* 1. Website Default Styling */
 /*------------------------------------------------------------------------------------------*/
 
+:root {
+    --border-color: #ccc;
+    --background-color: #fff;
+    --text-color: #111;
+    --sub-text-color: #e8e6e3;
+    --hover-color: #dda15e;
+    --square-color: #dda15e;
+    --green-color: #38b000;
+}
+
 
 body {
-    background:#fff;
+    background: var(--background-color);
 }
 
 
 /* Default Link Color */
 
 a, .la-ball-triangle-path {
-    color:#d2b356;
+    color: var(--hover-color);
 }
 
 a:hover, #header.nav-solid nav a:hover {
-    color:#d2b356;
+    color: var(--hover-color);
 }
 
 /* Default Icon Color */
-
 .icon i {
-    color:#d2b356;
+    color: var(--hover-color);
 }
 
 /* Border Color */
 
-#banner .section-heading:before, .testimonial.classic footer:before {
-    background: #d2b356;
+#banner .section-heading:before, .project.classic footer:before {
+    background: var(--square-color);
 }
 
 .pricing-block-content:hover {
-    border-color:#d2b356;
+    border-color: var(--square-color);
 }
 
+.filter-square-color{
+    filter: invert(68%) sepia(55%) saturate(393%) hue-rotate(350deg) brightness(91%) contrast(90%);
+}
 
 /*------------------------------------------------------------------------------------------*/
 /* 2. Navigation */
@@ -72,7 +73,7 @@ a:hover, #header.nav-solid nav a:hover {
     border-color: #d2b356;
 }    
 
-
+.section-comment { color: #ccc;}
 
 /*------------------------------------------------------------------------------------------*/
 /* 3. Primary and Secondary Colors */
@@ -90,7 +91,7 @@ a:hover, #header.nav-solid nav a:hover {
 }
 
 .section-heading h2:after {
-    background:#d2b356;
+    background: var(--square-color);
     content:"";
     display:block;
     width:30px;
@@ -124,8 +125,8 @@ a:hover, #header.nav-solid nav a:hover {
 /* Banner Background and Text Colors */
 
 #banner {
-    background: url("../images/banner-images/banner-image-1.jpg") no-repeat center top;
-    background-size:cover;
+    /* background: url("../images/background-images/dandelion-more.png") no-repeat center top;
+    background-size: cover; */
 }
 
 
@@ -191,18 +192,18 @@ body {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 16px;
     font-weight:300;
-    color:#9c9c9c;
+    /* color:#9c9c9c; */
 }
 
 /* Testimonial */
 
-.testimonial q {
+.project p {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 17px; 
     font-weight:300;
 }
 
-.testimonial.classic q, .testimonial.classic footer {
+.project.classic p, .project.classic footer {
     color:#111;
 }
 

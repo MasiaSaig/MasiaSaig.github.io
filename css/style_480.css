@@ -1,0 +1,108 @@
+/* Landscape mobile & down
+===============================*/
+@media (max-width: 480px) {
+
+    #wrapper {
+        margin:0;
+        padding:0;
+    }
+
+    .page-border, #scrollUp, #scrollUp:before {
+        display:none;
+    }
+
+    .row {
+        padding: 15px !important;
+    }
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38, .row {
+        width: 100%;
+    }
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .section-padding { padding: 0px; }
+
+    [class*="text-"] {
+        text-align: center;
+    }
+
+    /*-----------------Header Elements-----------------*/
+    #header .row {
+        padding: 0 15px !important;
+    }
+
+    #header.nav-solid [class*="col-"] {
+        padding: 0;
+    }
+
+    /*Logo*/
+    #logo h2 {
+        padding: 0;
+    }
+
+    /* Social */
+    #header aside {
+        clear: both;
+        padding: 0;
+    }
+
+    #header ul.social-icons {
+        margin-top: 0;
+    }
+
+    #banner-content { 
+        height: 500px; 
+        /* background-image: url('../images/background-images/dandelion-more.png'); */
+        /* background-size: auto 75%; */
+        /* background-repeat: no-repeat; */
+        /* background-position: bottom 0px right -100px; */
+    }
+    #banner-content.row { padding-top: 85px !important; }
+
+    #banner-headline { width: 100%; }
+    
+
+    /* #dandelions { display: none; } */
+
+    /*-----------------Sections-----------------*/
+
+    /* Call to Action*/
+    .call-to-action {
+        padding-bottom: 25px;
+    }
+
+    /* Video */
+    .slvj-lightbox iframe, .slvj-lightbox object, .slvj-lightbox embed {
+        height: 270px !important;
+    }
+
+    /* Footer */
+    #landing-footer #copyright {
+        float: left;
+        width: 50%;
+    }
+
+    #landing-footer .social-icons {
+        float: right;
+        width: 50%;
+    }
+
+    /*-----------------Typography-----------------*/
+    h1 {
+        font-size: 38px;
+    }
+
+    #banner h1 {
+        font-size: 48px;
+    }
+
+    /* Hide Elements */
+    a#scrollUp {
+        display: none !important;
+    }
+
+}
