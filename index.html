@@ -11,7 +11,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
-    <!--Favicon-->
     <link rel="shortcut icon" href="images/M-logo-M.ico" title="MasiaSaig"/>
 
     <!-- Namari Color CSS -->
@@ -24,6 +23,7 @@
     <link rel="stylesheet" href="css/style_1024.css">
     <link rel="stylesheet" href="css/style_767.css">
     <link rel="stylesheet" href="css/style_480.css">
+    <link rel="stylesheet" href="css/style_400.css">
 
     <!--Icon Fonts - Font Awesome Icons-->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -37,7 +37,7 @@
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="">
 
 <!--  
 TODO: 
@@ -69,40 +69,47 @@ TODO:
     <!-- data-enllax-ratio=".5" -->
     <header id="banner" class="clearfix" >
         <div id="header" class="nav-collapse">
-            <div class="row clearfix">
+            <div id="top-nav-bar" class="row clearfix">
                 <div class="col-1">
 
                     <!--Logo-->
                     <div id="logo">
 
                         <!--Logo that is shown on the banner-->
-                        <img src="images/Maciej-Muller-logo.jpg" id="banner-logo" alt="Landing Page"/>
+                        <img src="images/Maciej-Muller-logo.png" id="banner-logo" alt="Maciej Müller"/>
                         <!--End of Banner Logo-->
 
                         <!--The Logo that is shown on the sticky Navigation Bar-->
-                        <img src="images/Maciej-Muller-logo.jpg" id="navigation-logo" alt="Landing Page"/>
+                        <img src="images/Maciej-Muller-logo.png" id="navigation-logo" alt="Maciej Müller"/>
                         <!--End of Navigation Logo-->
+
+                        <button id="theme-switch">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                        </button>
 
                     </div>
                     <!--End of Logo-->
 
                     <aside>
 
+                        
+
                         <!--Social Icons in Header-->
                         <ul class="social-icons">
-                            <li>
+                            <li class="wow swing" data-wow-delay="0.5s">
                                 <a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/maciej-lukasz-mueller">
-                                    <i class="fa-brands fa-linkedin fa-1x"></i><span>Linkedin</span>
+                                    <i class="fa-brands fa-linkedin fa-1-5x"></i><span>Linkedin</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="wow swing" data-wow-delay="0.5s">
                                 <a target="_blank" title="Github" href="https://github.com/MasiaSaig">
-                                    <i class="fa-brands fa-github fa-1x"></i><span>Github</span>
+                                    <i class="fa-brands fa-github fa-1-5x"></i><span>Github</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="wow swing" data-wow-delay="0.5s">
                                 <a target="_blank" title="Discord" href="https://discordapp.com/users/372813132286132236">
-                                    <i class="fa-brands fa-discord fa-1x"></i><span>Discord</span>
+                                    <i class="fa-brands fa-discord fa-1-5x"></i><span>Discord</span>
                                 </a>
                             </li>
                         </ul>
@@ -119,9 +126,9 @@ TODO:
                             <li>
                                 <a href="#about">About</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#experience">Experience</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#skills">Skills</a>
                             </li>
@@ -146,16 +153,29 @@ TODO:
         </div><!--End of Header-->
 
         <!--Banner Content-->
-        <!-- data-enllax-ratio=".5" -->
-        <div id="home" class="row clearfix scrollto" >
+        <div id="home" class="row clearfix scrollto" data-enllax-ratio=".5">
             
-            <img id="dandelions-background" src="images/background-images/dandelion-more.png">
 
-             <!-- <div class="col-38"> -->
-                <!--Call to Action-->
-                <!-- <a href="#" class="button">START CREATING TODAY</a> -->
-                <!--End Call to Action-->
-            <!-- </div> -->
+            <div id="dandelions">
+                <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                    <path id="pappus-path1" d="M690 280Q451 187-218 173" fill="transparent"/>
+                </svg>
+                <div id="pappus-wrap1" class="pappus-wrapper"> <img id="pappus1" src="images/background-images/pappus1.png"> </div>
+
+                <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                    <path id="pappus-path2" d="M800 100q-193-9-305 52-67 38-236 25-218-16-488 113" fill="transparent"/>
+                </svg>
+                <div id="pappus-wrap2" class="pappus-wrapper"> <img id="pappus2" src="images/background-images/pappus2.png"> </div>
+                <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                    <path id="pappus-path3" d="M615 380Q375 271-218 460" fill="transparent"/>
+                </svg>
+                <div id="pappus-wrap3" class="pappus-wrapper"> <img id="pappus3" src="images/background-images/pappus3.png"> </div>
+                <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
+                    <path id="pappus-path4" d="M845 320Q683 212-280 350" fill="transparent"/>
+                </svg>
+                <div id="pappus-wrap4" class="pappus-wrapper"> <img id="pappus4" src="images/background-images/pappus2.png"> </div>
+            </div>
+
 
             <div id="headline">
                 <div id="banner-headline" class="section-heading">
@@ -163,27 +183,6 @@ TODO:
                     <h2>Third year student at AGH University of Science and Technology studying Applied Computer Science.</h2>
                 </div>
 
-                <div class="bottom-right">
-                <div id="dandelions" style="margin-right: 0px; margin-left: auto;">
-                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
-                        <path id="pappus-path1" d="M690 280Q451 187-218 173" fill="transparent"/>
-                    </svg>
-                    <div id="pappus-wrap1" class="pappus-wrapper"> <img id="pappus1" src="images/background-images/pappus1.png"> </div>
-
-                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
-                        <path id="pappus-path2" d="M800 100q-193-9-305 52-67 38-236 25-218-16-488 113" fill="transparent"/>
-                    </svg>
-                    <div id="pappus-wrap2" class="pappus-wrapper"> <img id="pappus2" src="images/background-images/pappus2.png"> </div>
-                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
-                        <path id="pappus-path3" d="M615 380Q375 271-218 460" fill="transparent"/>
-                    </svg>
-                    <div id="pappus-wrap3" class="pappus-wrapper"> <img id="pappus3" src="images/background-images/pappus3.png"> </div>
-                    <svg viewBox="0 0 1080 683" style="width: 100%; height: 100%; position: absolute;">
-                        <path id="pappus-path4" d="M845 320Q683 212-280 350" fill="transparent"/>
-                    </svg>
-                    <div id="pappus-wrap4" class="pappus-wrapper"> <img id="pappus4" src="images/background-images/pappus2.png"> </div>
-                </div>
-                </div>
             </div>
 
         </div>
@@ -192,7 +191,7 @@ TODO:
 
 
     <!--Main Content Area-->
-    <main id="content">
+    <main id="content" class="default-background">
         <!--About Content Section-->
         <div id="about" class="row clearfix scrollto" tabindex="-1">
 
@@ -211,7 +210,7 @@ TODO:
             </p>
             <div id="timeline" class="">
                 <div id="timeline-buttons" class="">
-                    <a id="historyButton" class="button">History</a>
+                    <a id="historyButton" class="button is-active">History</a>
                     <a id="presentButton" class="button">Present</a>
                     <a id="plansButton" class="button">Plans</a>
                 </div>
@@ -242,7 +241,6 @@ TODO:
                 </div>
             </div>
 
-            <!-- <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i></a> -->
         </div>
 
         </div>
@@ -255,18 +253,19 @@ TODO:
             <div class="col-3">
                 <div class="section-heading">
                     <h2 class="section-title">Skills</h2>
-                    <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!
+                    <p class="section-subtitle">
+                        I also try new tools and frameworks such as: docker, ruby on rails, django, etc. but I did not spend enough time with them to include them in my skills.
                     </p>
 
                     <h3>Other Skills</h3>
                     <div id="other-skills">
-                        <img src="images/skills-images/matlab.svg" alt="MATLAB"> 
-                        <img src="images/skills-images/overleaf.svg" alt="Overleaf"> 
+                        <img src="images/skills-images/doxygen.svg" alt="Doxygen" class="smaller-icon"> 
                         <i class="fa-brands fa-git-alt fa-2x" style="color: #f05030"></i>
-                        <img src="images/skills-images/mysql.svg" alt="MySQL"> 
-                        <img src="images/skills-images/postgresql.svg" alt="PostgreSQL"> 
                         <img src="images/skills-images/linux.svg" alt="Linux"> 
+                        <img src="images/skills-images/matlab.svg" alt="MATLAB"> 
+                        <img src="images/skills-images/mysql.svg" alt="MySQL"> 
+                        <img src="images/skills-images/overleaf.svg" alt="Overleaf"> 
+                        <img src="images/skills-images/postgresql.svg" alt="PostgreSQL"> 
                         <img src="images/skills-images/qt.svg" alt="QT"> 
                     </div>
                 </div>
@@ -275,174 +274,49 @@ TODO:
             <div class="col-2-3">
 
                 <div class="col-1">
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.1s">
                         <img src="images/skills-images/c.svg" alt="C"/>
                         <div class="skill-overlay"><span>C</span></div>
                     </div>
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.2s">
                         <img src="images/skills-images/cpp.svg" alt="C++"/>
                         <div class="skill-overlay"><span>C++</span></div>
                     </div>
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.3s">
                         <img src="images/skills-images/html.svg" alt="HTML"/>
                         <div class="skill-overlay"><span>HTML</span></div>
                     </div>
                 </div>
                 <div class="col-1">
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.6s">
                         <img src="images/skills-images/css.svg" alt="CSS"/>
                         <div class="skill-overlay"><span>CSS</span></div>
                     </div>
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.5s">
                         <img src="images/skills-images/javascript.svg" alt="JavaScript"/>
                         <div class="skill-overlay"><span>JavaScript</span></div>
                     </div>
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.4s">
                         <img src="images/skills-images/java.svg" alt="Java"/>
                         <div class="skill-overlay"><span>Java</span></div>
                     </div>
                 </div>  
                 <div class="col-1">
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.7s">
                         <img src="images/skills-images/php.svg" alt="PHP"/>
                         <div class="skill-overlay"><span>PHP</span></div>
                     </div>
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.8s">
                         <img src="images/skills-images/python.svg" alt="Python"/>
                         <div class="skill-overlay"><span>Python</span></div>
                     </div>
-                    <div class="col-3 skill">
+                    <div class="col-3 skill wow fadeInUp" data-wow-delay="0.9s">
                         <img src="images/skills-images/sql.svg" alt="SQL"/>
                         <div class="skill-overlay"><span>SQL</span></div>
                     </div>
                 </div>  
 
             </div>
-
-
-
-
-
-
-            <!-- <div class="col-2-3"> -->
-                <!-- C, C++ -->
-                <!-- <div class="col-1">
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="icon">
-                            <img src="images/skills-images/c.svg" alt="C" style="height: 30.5px;">
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>C</h4>
-                            <p>Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro
-                                nemore vivendum</p>
-                        </div>
-                    </div>
-    
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="icon">
-                            <img src="images/skills-images/cpp.svg" alt="C++" style="height: 30.5px;">
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>C++</h4>
-                            <p>Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro
-                                nemore vivendum</p>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- HTML, CSS, JavaScript -->
-                <!-- <div class="col-1">
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="icon">
-                            <i class="fa-brands fa-html5 fa-2x"></i>
-                            <i class="fa-brands fa-css3 fa-2x"></i>
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>HTML &amp; CSS</h4>
-                            <p>Has ne tritani atomorum conclusionemque, in dolorum volumus cotidieque eum. At vis choro
-                                neglegentur iudico</p>
-                        </div>
-                    </div>
-
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon">
-                            <i class="fa-brands fa-js fa-2x"></i>
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>JavaScript</h4>
-                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
-                                detracto mediocrem disputationi</p>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- Java, PHP -->
-                <!-- <div class="col-1">
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="icon">
-                            <i class="fa-brands fa-java fa-2x"></i>
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>Java</h4>
-                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
-                                detracto mediocrem disputationi</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="icon">
-                            <i class="fa-brands fa-php fa-2x"></i>
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>PHP</h4>
-                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
-                                detracto mediocrem disputationi</p>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- Python, Qt  -->
-                <!-- <div class="col-1">
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="icon">
-                            <i class="fa-brands fa-python fa-2x"></i>
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>Python</h4>
-                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
-                                detracto mediocrem disputationi</p>
-                        </div>
-                    </div>
-
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="icon">
-                            <img src="images/skills-images/qt.svg" alt="Qt" style="height: 30.5px;">
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>Qt QML</h4>
-                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
-                                detracto mediocrem disputationi</p>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- SQL -->
-                <!-- <div class="col-1">
-                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.9s">
-                        <div class="icon">
-                            <i class="fa fa-database fa-2x"></i>
-                        </div>
-                        <div class="icon-block-description">
-                            <h4>SQL</h4>
-                            <p>Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit
-                                detracto mediocrem disputationi</p>
-                        </div>
-                    </div>
-                </div> -->
-
-                
-
-            <!-- </div> -->
 
         </div>
 
@@ -451,55 +325,69 @@ TODO:
 
     <!--Projects-->
     <!-- data-enllax-ratio=".2" -->
-    <section id="projects" class="text-center scrollto secondary-color" >
-
+    <section id="projects" class="text-center scrollto secondary-color">
         <div class="row clearfix">
 
             <div class="section-heading">
                 <h2 class="section-title">Projects</h2>
             </div>
 
-            <div style="display: flex; width: 100%; height: fit-content; align-items: stretch; ">
-                <div class="project classic">
+            <div id="projects-list">
+                <div class="project classic wow zoomIn" data-wow-delay="0.1s">
                     <img src="images/projects-images/stowarzyszenie_okocim_od_serca.png" alt="Stowarzyszenie Okocim od Serca"/>
                     <p class="project-description">
                         Simple website for local association, that I made together with my brother, using HTML, CSS, JS and PHP .</p>
                     <footer><a href="https://okocimodserca.pl/">Okocim od Serca</a></footer>
                 </div>
 
-                <div class="project classic">
-                    <img src="images/projects-images/krzywe_lissajousa.png" alt="Lissajous Curve"/>
+                <div class="project classic wow zoomIn" data-wow-delay="0.3s">
+                    <img src="images/projects-images/temperature_regulator.png" alt="Temperature Regulator"/>
                     <p class="project-description">Embedded systems program, made I created together with friend from collage. 
                         It is an implementation of a PID, that controlls small heater made of resistor.</p>
                     <footer><a href="https://github.com/MasiaSaig/TempReg">Temperature Regulator</a></footer>
                 </div>
 
-                <div class="project classic">
-                    <img src="images/projects-images/temperature_regulator.png" alt="Temperature Regulator"/>
+                <div class="project classic wow zoomIn" data-wow-delay="0.5s">
+                    <img src="images/projects-images/krzywe_lissajousa.png" alt="Lissajous Curve"/>
                     <p class="project-description">Another project made with two of my collagues from AGH. 
                         It draws three-dimensional Lissajous curves in Cartesian and/or polar coordinates. </p>
                     <footer><a href="https://github.com/MasiaSaig/Projekt_Krzywe_Lissajous_3D">3D Lissajous Curve</a></footer>
                 </div>
             </div>
-            <p> Rest of my project, can be found on my <a href="https://github.com/MasiaSaig?tab=repositories">github page</a>. </p>
-        </div>
+            <p id="rest-projects"> Rest of my project, can be found on my <a href="https://github.com/MasiaSaig?tab=repositories">github page</a>. </p>
 
-    </aside>
+        </div>
+    </section>
     <!--End of Projects-->
 
     </main>
 
     <!--Footer-->
-    <footer id="landing-footer" class="clearfix">
+    <footer id="contact-footer" class="clearfix">
         <div class="row clearfix">
 
             <p id="copyright" class="col-2">You can contact me on: mullermaciej12@gmail.com</p>
 
             <!--Social Icons in Footer-->
-            <ul class="col-2 social-icons">
+            <ul id="footer-icons" class="col-2 social-icons">
                 <li>
-                    <a target="_blank" title="behance" href="http://www.behance.net">
-                        <i class="fa-solid fa-envelope fa-1x"></i><span>email</span>
+                    <a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/maciej-lukasz-mueller">
+                        <i class="fa-brands fa-linkedin fa-2x"></i><span>Linkedin</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Github" href="https://github.com/MasiaSaig">
+                        <i class="fa-brands fa-github fa-2x"></i><span>Github</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Discord" href="https://discordapp.com/users/372813132286132236">
+                        <i class="fa-brands fa-discord fa-2x"></i><span>Discord</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="behance" href="mailto:mullermaciej12@gmail.com">
+                        <i class="fa-solid fa-envelope fa-2x"></i><span>email</span>
                     </a>
                 </li>
             </ul>
@@ -513,9 +401,9 @@ TODO:
 <!-- Include JavaScript resources -->
 <script src="js/jquery.1.8.3.min.js"></script>
 <script src="js/wow.min.js"></script>
-<script src="js/featherlight.min.js"></script>
+<!-- <script src="js/featherlight.min.js"></script> -->
 <!-- <script src="js/featherlight.gallery.min.js"></script> -->
-<!-- <script src="js/jquery.enllax.min.js"></script> -->
+<script src="js/jquery.enllax.min.js"></script>
 <script src="js/jquery.scrollUp.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.stickyNavbar.min.js"></script>
@@ -524,8 +412,10 @@ TODO:
 <script src="js/lightbox.min.js"></script>
 <script src="js/site.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script src="js/skrypt.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/dandelions.js"></script>
+<script src="js/timeline_buttons.js"></script>
+<script src="js/themeChange.js"></script>
 
 </body>
 </html>

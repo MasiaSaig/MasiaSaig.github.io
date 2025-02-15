@@ -17,10 +17,8 @@ $(document).ready(function () {
 		if ($("nav#nav-mobile ul").hasClass("expanded")) {
 			$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
 			$(this).removeClass("open");
-			$("#top-nav-bar").removeClass("default-background");
 		} else {
 			$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-			$("#top-nav-bar").addClass("default-background");
 			$(this).addClass("open");
 		}
 	});

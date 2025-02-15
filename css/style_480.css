@@ -1,6 +1,6 @@
 /* Landscape mobile & down
 ===============================*/
-@media (max-width: 480px) {
+@media (max-width: 480px) or (max-width: 400px) {
 
     #wrapper {
         margin:0;
@@ -12,7 +12,7 @@
     }
 
     .row {
-        padding: 15px !important;
+        padding: 15px;
     }
 
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38, .row {
@@ -26,21 +26,12 @@
 
     .section-padding { padding: 0px; }
 
-    [class*="text-"] {
-        text-align: center;
-    }
-
     /*-----------------Header Elements-----------------*/
     #header .row {
-        padding: 0 15px !important;
+        padding: 0 15px;
     }
 
     #header.nav-solid [class*="col-"] {
-        padding: 0;
-    }
-
-    /*Logo*/
-    #logo h2 {
         padding: 0;
     }
 
@@ -56,37 +47,54 @@
 
     #banner-content { 
         height: 500px; 
-        /* background-image: url('../images/background-images/dandelion-more.png'); */
-        /* background-size: auto 75%; */
-        /* background-repeat: no-repeat; */
-        /* background-position: bottom 0px right -100px; */
     }
-    #banner-content.row { padding-top: 85px !important; }
 
-    #banner-headline { width: 100%; }
-    
+    #banner-content.row { 
+        padding-top: 85px !important; 
+    }
 
-    /* #dandelions { display: none; } */
+    #banner-headline { 
+        width: 100%; 
+    }
 
     /*-----------------Sections-----------------*/
 
-    /* Call to Action*/
-    .call-to-action {
-        padding-bottom: 25px;
+    /* About Me */
+    [class*="text-"] {
+        text-align: center;
     }
 
-    /* Video */
-    .slvj-lightbox iframe, .slvj-lightbox object, .slvj-lightbox embed {
-        height: 270px !important;
+    /* Skills */ 
+    .skill img { 
+        padding: 10px; 
+    }
+
+    /* Projects */
+    #projects-list { 
+        display: block !important; 
+    }
+
+    .project { 
+        width: 100%; 
+        float: left; 
+    }
+
+    #rest-projects { 
+        width: 100%; 
+        float: left; 
     }
 
     /* Footer */
-    #landing-footer #copyright {
+    #contact-footer {
+        margin-bottom: 0px;
+    }
+
+    #contact-footer #copyright {
         float: left;
         width: 50%;
     }
 
-    #landing-footer .social-icons {
+    #contact-footer .social-icons {
         float: right;
         width: 50%;
     }

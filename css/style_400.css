@@ -1,0 +1,34 @@
+@media (max-width: 400px) {
+    #top-nav-bar { 
+        padding: 0 5px !important; 
+    }
+
+    #nav-mobile li { 
+        margin: 0 30px !important; 
+    }
+
+    #logo { 
+        margin-right: 0; 
+    }
+
+    #timeline-buttons { 
+        flex-direction: column; 
+    }
+
+    #timeline-buttons .button { 
+        margin: 5px 0;  
+        text-align: center; 
+    }
+
+    .skill img { 
+        padding: 5px; 
+    }
+
+    #copyright { 
+        width: 100% !important; 
+    }
+
+    #footer-icons{
+        width: 100% !important;
+    }
+}
