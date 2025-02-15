@@ -16,7 +16,6 @@ const pappus_scale4 = 0.14;
 
 // Select the path and the image element
 const pappus_path1 = document.querySelector('#pappus-path1');
-// const pappus_path_length1 = path.getTotalLength();
 const pappus_path2 = document.querySelector('#pappus-path2');
 const pappus_path3 = document.querySelector('#pappus-path3');
 const pappus_path4 = document.querySelector('#pappus-path4');

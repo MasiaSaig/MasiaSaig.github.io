@@ -148,6 +148,7 @@ section {
 
 #navigation-logo {
     display: none;
+    padding: 4px 0;
 }
 
 #banner-logo { 
@@ -249,10 +250,14 @@ section {
     opacity: 1;
 }
 
+.no-bottom-padding{
+    padding-bottom: 0px;
+}
+
 /* Responsive Nav Styling */
 #top-nav-bar{
     background: var(--main-color);
-    padding-top: 5px;
+    /* padding-top: 5px; */
 }
 
 #nav-trigger {

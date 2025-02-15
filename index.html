@@ -9,7 +9,7 @@
     <!--Meta Keywords and Description-->
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="shortcut icon" href="images/M-logo-M.ico" title="MasiaSaig"/>
 
@@ -50,10 +50,10 @@
 <!--End of Preloader-->
 
 <div id="border" class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
-    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
-    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
-    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
-    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+    <div id="top-frame" class="top-border wow fadeInDown animated" ></div>
+    <div id="right-frame" class="right-border wow fadeInRight animated"></div>
+    <div id="bottom-frame" class="bottom-border wow fadeInUp animated"></div>
+    <div id="left-frame" class="left-border wow fadeInLeft animated"></div>
 </div>
 
 <div id="wrapper">
@@ -61,7 +61,7 @@
     <header id="banner" class="clearfix" >
         <div id="header" class="nav-collapse">
             <div id="top-nav-bar" class="row clearfix">
-                <div class="col-1">
+                <div class="col-1 no-bottom-padding">
 
                     <!--Logo-->
                     <div id="logo">
@@ -84,21 +84,19 @@
 
                     <aside>
 
-                        
-
                         <!--Social Icons in Header-->
                         <ul class="social-icons">
-                            <li class="wow swing" data-wow-delay="0.5s">
+                            <li id="linkedin-icon" class="wow swing" data-wow-delay="0.5s">
                                 <a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/maciej-lukasz-mueller">
                                     <i class="fa-brands fa-linkedin fa-1-5x"></i><span>Linkedin</span>
                                 </a>
                             </li>
-                            <li class="wow swing" data-wow-delay="0.5s">
+                            <li id="github-icon" class="wow swing" data-wow-delay="0.5s">
                                 <a target="_blank" title="Github" href="https://github.com/MasiaSaig">
                                     <i class="fa-brands fa-github fa-1-5x"></i><span>Github</span>
                                 </a>
                             </li>
-                            <li class="wow swing" data-wow-delay="0.5s">
+                            <li id="discord-icon" class="wow swing" data-wow-delay="0.5s">
                                 <a target="_blank" title="Discord" href="https://discordapp.com/users/372813132286132236">
                                     <i class="fa-brands fa-discord fa-1-5x"></i><span>Discord</span>
                                 </a>
@@ -190,14 +188,14 @@
             <div class="section-heading">
                 <h2 class="section-title">About Me</h2>
             </div>
-            <p>I am a third year student at AGH University of Science and Technology studying Applied Computer Science. 
-                I am a programmer, who is interested mostly in application and web developement, also embedded systems, 
-                to which I got introduced recently at collage. 
+            <p>
+                I am a third year student at AGH University of Science and Technology studying Applied Computer Science. 
+                I am a programmer, who is interested mostly in embedded systems, application and web developement.
             </p>
             <p>
-                I belive, that a person should strive to live a life without regret, to make most of their time and choose
-                best decisions possible. That is why, I like to organize my time. Focusing fully on what I do at the moment, 
-                either working, studying or relaxing.
+                I belive, that a person should strive to live a life without regret, to make most of their time. That is 
+                why, I like to organize my time and prepare before taking some actions. Focusing fully on what I do at the 
+                moment, either working, studying or even relaxing.
             </p>
             <div id="timeline" class="">
                 <div id="timeline-buttons" class="">
@@ -208,26 +206,35 @@
 
                 <div id="timeperiods">
                     <div id="past" class="timeperiod section-heading text-center" style="visibility: visible; opacity: 1;">
-                        <p>I began my programming journey, with Python. I was mainly solving some simple problems on a phone application. It 
-                            was not so entertaining to me at moment, but it kept me busy between breaks in middle school.</p>
-                        <p>Later in technical school, I learnt basics of C++ mixed with C. At first I did not like it, but with time I was 
-                            favouring it more and more and soon C++ became my favorite programming language. With it, we did some 
-                            introductions to algorythms and their concepts.
+                        <p>I began my programming journey, with Python. I was mainly solving some simple problems, on my phone. It 
+                            was not so entertaining to me at the moment, but it kept me busy between breaks in middle school.</p>
+                        <p>Later in technical school, I learnt basics of C++ mixed with C. At first, I did not like it, but with time, I was 
+                            favouring it more and more and soon C++ became my favorite programming language. With it, we analized some 
+                            basic algorythms.
                         </p>
                         <p>Other than that, I also got introduced to developing websited using HTML, CSS, JavaScript and later PHP with SQL.
                             Learning all those stuff at the same time, was interesting and being able to create my own website, than adding 
-                            some cool effects and finally making it more advanced by manipulating database was very satisfying.</p>
+                            some cool effects and finally making it more advanced by manipulating database, was very satisfying.</p>
+                        <p>In collage, we dived into more details about C and C++, which was great and made me realize, how many things I was 
+                            still missing. There was also introduction to algorythms and data-structures and computer graphics. Next I made a 
+                            recap of computer networks and databases with SQL. Other classes introduced us to electornics and programming 
+                            embedded systems, which I became very interested in.</p>
                     </div>
                     <div id="present" class="timeperiod section-heading text-center" style="visibility: hidden; opacity: 0; transform: translateY(100%);">
                         
-                        <p>Currently I am an applied computer science student at AGH University of Science and Technology and an intern at 
-                            Leading Devices.</p>
-                        <p>In my free time, I also program some simple programs while trying to learn new technologies. </p>
+                        <p>Currently I am an applied computer science student at AGH University of Science and Technology. I also am an intern at 
+                            Leading Devices, where I work mostly using Qt Qml in frontend to create desired graphical UI.</p>
+                        <p>In my free time, I also program some simple programs, while trying to learn new languages, frameworks and generally improve 
+                            my programming skills.</p>
                     </div>
                     <div id="future" class="timeperiod section-heading text-center" data-wow-delay="0.2s" style="visibility: hidden; opacity: 0; transform: translateX(100%);">
                         
-                        <p>In the Future I am planning on learning more about embedded systems, tools used to develop them and electronics 
-                            with commonly used interfaces and their standards, to be able to create more advanced things.</p>
+                        <p>In the Future I am planning on learning more about embedded systems, helpful tools used to develop them and 
+                            electronics together with commonly used interfaces and their standards.</p>
+                        <p>Additionally, I would like to know how to use atleast one web framework, used to create web-applications 
+                            etc. My goal would be learning atleast basics of, ruby on rails, NodeJS, TypeScript or React. Later 
+                            on, I could move on to some less common frameworks.</p>
+                        <p>But ofcourse, everything can change, depending on my future jobs.</p>
                     </div>
                 </div>
             </div>
@@ -245,7 +252,7 @@
                 <div class="section-heading">
                     <h2 class="section-title">Skills</h2>
                     <p class="section-subtitle">
-                        I also try new tools and frameworks such as: docker, ruby on rails, django, etc. but I did not spend enough time with them to include them in my skills.
+                        I also try new tools and frameworks such as: docker, ruby on rails, django, etc. but I did not spend enough time with them, to include them in my skills.
                     </p>
 
                     <h3>Other Skills</h3>
@@ -396,17 +403,18 @@
 <!-- <script src="js/featherlight.gallery.min.js"></script> -->
 <script src="js/jquery.enllax.min.js"></script>
 <script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
+<!-- <script src="js/jquery.easing.min.js"></script> -->
 <script src="js/jquery.stickyNavbar.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
-<script src="js/images-loaded.min.js"></script>
-<script src="js/lightbox.min.js"></script>
+<!-- <script src="js/images-loaded.min.js"></script> -->
+<!-- <script src="js/lightbox.min.js"></script> -->
 <script src="js/site.js"></script>
 
 <script src="js/anime.min.js"></script>
 <script src="js/dandelions.js"></script>
 <script src="js/timeline_buttons.js"></script>
 <script src="js/themeChange.js"></script>
+<script src="js/startup.js"></script>
 
 </body>
 </html>
