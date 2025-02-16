@@ -6,7 +6,7 @@
 /* --main-lightt-color: #ccc; */
 
 :root {
-    --main-color: #fff;
+    --main-color: #e6e6e6;
     --main-weaker-color: #f5f5f5;
     --main-weak-color: #ccc;
     --main-counter-color: #333;
@@ -14,7 +14,7 @@
     --text-color: #111;
     --text-weaker-color: #999;
     --text-weak-color: #ccc;
-    --secondary-color: #dda15e;
+    --secondary-color: #f2860e; /* #dda15e */
 }
 
 .darkmode{

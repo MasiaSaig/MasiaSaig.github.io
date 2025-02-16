@@ -669,8 +669,13 @@ h3 {
     align-items: center;
 }
 
-#other-skills img { height: 30.5px; }
-.smaller-icon { height: 25px; }
+#other-skills img { 
+    height: 30.5px; 
+}
+
+.smaller-icon { 
+    height: 25px !important; 
+}
 
 /*------------------------------------------------------------------------------------------*/
 /* 7. Footer */
