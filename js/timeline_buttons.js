@@ -27,7 +27,7 @@ function hidePreviousElement(){
 }
 
 function showNextElement(){
-    timeperiods[clickedTimeline].style.transitionDelay = "0.75s";
+    timeperiods[clickedTimeline].style.transitionDelay = "0.5s";
     timeperiods[clickedTimeline].style.opacity = "1";
     timeperiods[clickedTimeline].style.visibility= "visible";
     timeperiods[clickedTimeline].style.transform = "translateX(0)";

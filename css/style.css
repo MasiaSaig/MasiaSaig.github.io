@@ -15,12 +15,12 @@
 #timeperiods { 
     width: 100%; 
     position: relative; 
-    transition: height 1.75s linear;
+    transition: height 1s linear;
 }
 .timeperiod { 
     position: absolute; 
     width: 100%; 
-    transition: opacity 1s linear, visibility 1s linear, transform 1s linear;
+    transition: opacity 0.5s linear, visibility 0.5s linear, transform 0.5s linear;
 }
 
 #skills .col-1 { 
