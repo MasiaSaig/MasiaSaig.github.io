@@ -89,9 +89,10 @@ section {
 #header {
     height: 71px !important;
     overflow: visible;
-    z-index: 9999;
+    /* z-index: 9999; */
     width: 100%;
     position: absolute !important;
+    background: var(--main-color);
 }
 
 #header .row {
