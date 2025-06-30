@@ -93,12 +93,8 @@
     }
 
     /* Projects */
-    #projects-list { 
-        display: block !important; 
-    }
-
     .project { 
-        width: 50%; float: left; 
+        width: 50%;
     }
 
     #rest-projects { 
