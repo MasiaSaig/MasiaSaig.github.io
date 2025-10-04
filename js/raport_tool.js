@@ -72,9 +72,9 @@ function render() {
 }
 
 function updateRangeBadge() {
-  if (!entries.length) { rangeBadge.textContent = 'No entries yet'; return; }
+  if (!entries.length) { rangeBadge.textContent = 'Brak danych'; return; }
   const first = entries[0].date, last = entries[entries.length-1].date;
-  rangeBadge.textContent = first === last ? `Date: ${first}` : `From ${first} to ${last}`;
+  rangeBadge.textContent = first === last ? `Data: ${first}` : `Od ${first} do ${last}`;
 }
 
 form.addEventListener('submit', (e) => {
@@ -82,9 +82,9 @@ form.addEventListener('submit', (e) => {
   const date = toISO(dateEl.value);
   const hours = parseFloat(hoursEl.value);
   const desc = formatTextDescription((descEl.value || '').trim());
-  if (!date) { alert('Please select a date.'); return; }
-  if (!(hours >= 0)) { alert('Hours must be a number ≥ 0.'); return; }
-  if (!desc) { alert('Please add a short description.'); return; }
+  if (!date) { alert('Wybierz datę.'); return; }
+  if (!(hours >= 0)) { alert('Ilość godzin musi być ≥ 0.'); return; }
+  if (!desc) { alert('Podaj krótki opis.'); return; }
   entries.push({ date, hours, desc });
   saveEntries();
   render();
@@ -96,7 +96,7 @@ form.addEventListener('submit', (e) => {
 
 document.getElementById('clearBtn').addEventListener('click', () => {
   if (!entries.length) return;
-  if (confirm('Remove all rows?')) {
+  if (confirm('Usunąć wszystkie wiersze?')) {
     entries = []; saveEntries(); render();
   }
 });
@@ -123,7 +123,7 @@ function formatTextDescription(text){
 }
 
 document.getElementById('exportBtn').addEventListener('click', async () => {
-  if (!entries.length) { alert('Nothing to export – add at least one row.'); return; }
+  if (!entries.length) { alert('Nie ma co wyeksportować – dodaj przynajmniej jedno pole.'); return; }
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: 'pt', format: 'a4', encoding: 'UTF-8' });
 
@@ -156,7 +156,7 @@ document.getElementById('exportBtn').addEventListener('click', async () => {
       2: { cellWidth: 'auto' }
     },
     didDrawPage: (data) => {
-      // Footer with total
+      // Footer with total hours
       const pageSize = doc.internal.pageSize;
       const pageHeight = pageSize.height || pageSize.getHeight();
       
@@ -168,7 +168,7 @@ document.getElementById('exportBtn').addEventListener('click', async () => {
     margin: { left: 40, right: 40 }
   });
 
-  const filename = `Raport_Prac_Maciej_Muller_${first || ''}_${last || ''}.pdf`.replace(/[^a-z0-9_.-]+/gi, '-');
+  const filename = `Raport_Prac_${first || ''}_${last || ''}.pdf`.replace(/[^a-z0-9_.-]+/gi, '-');
   doc.save(filename);
 });
 
