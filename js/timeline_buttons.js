@@ -1,11 +1,11 @@
 const timeperiodsBox = document.getElementById("timeperiods");
 const past = document.getElementById("past");
-const present = document.getElementById("present");
+// const present = document.getElementById("present");
 const future = document.getElementById("future");
-let timeperiods = [past, present, future];
+let timeperiods = [past, future];
 
 const pastButton = document.getElementById("historyButton");
-const presentButton = document.getElementById("presentButton");
+// const presentButton = document.getElementById("presentButton");
 const futureButton = document.getElementById("plansButton");
 
 var clickedTimeline = 0;
@@ -17,10 +17,10 @@ function hidePreviousElement(){
     if(clickedTimeline == 0){
         pastButton.classList.toggle("is-active"); 
         past.style.transform = "translateX(-100%)";
+    // }else if(clickedTimeline == 1){
+    //     presentButton.classList.toggle("is-active"); 
+    //     present.style.transform = "translateY(100%)";
     }else if(clickedTimeline == 1){
-        presentButton.classList.toggle("is-active"); 
-        present.style.transform = "translateY(100%)";
-    }else if(clickedTimeline == 2){
         futureButton.classList.toggle("is-active"); 
         future.style.transform = "translateX(100%)";
     }
@@ -47,16 +47,16 @@ pastButton.onclick = function() {
     adjustTimeperiodsBoxHeight();
     this.classList.toggle("is-active"); 
 };
-presentButton.onclick = function() { 
-    hidePreviousElement();
-    clickedTimeline = 1;
-    showNextElement();
-    adjustTimeperiodsBoxHeight();
-    this.classList.toggle("is-active"); 
-};
+// presentButton.onclick = function() { 
+//     hidePreviousElement();
+//     clickedTimeline = 1;
+//     showNextElement();
+//     adjustTimeperiodsBoxHeight();
+//     this.classList.toggle("is-active"); 
+// };
 futureButton.onclick  = function() { 
     hidePreviousElement();
-    clickedTimeline = 2;
+    clickedTimeline = 1;
     showNextElement();
     adjustTimeperiodsBoxHeight();
     this.classList.toggle("is-active"); 
