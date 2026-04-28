@@ -1,0 +1,4 @@
+<template>
+  <ButtonLinkedin />
+  <ButtonGithub />
+</template>

@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+:root {
+  --color-raw-white: var(--color-white);
+  --color-raw-white-pale: var(--color-gray-100);
+  --color-raw-white-mute: var(--color-gray-200);
+  --color-raw-white-dull: var(--color-gray-300);
+
+  --color-raw-gray: var(--color-gray-400);
+  --color-raw-gray-soft: var(--color-gray-500);
+  --color-raw-gray-mute: var(--color-gray-600);
+  --color-raw-gray-dull: var(--color-gray-700);
+
+  --color-raw-black: var(--color-slate-950);
+  --color-raw-black-soft: var(--color-slate-900);
+  --color-raw-black-mute: var(--color-slate-800);
+  --color-raw-black-dull: var(--color-slate-700);
+
+  --color-raw-silver: #c4c4c4;
+
+  --color-raw-orange: rgba(228, 122, 0, 1);
+  --color-raw-orange-light: rgba(255, 179, 92, 1);
+  --color-raw-orange-second: rgba(150, 80, 0, 1);
+}
+
+:root {
+  --color-background-light: var(--color-raw-white);
+  --color-background: var(--color-raw-white-dull);
+  --color-background-soft: var(--color-raw-black-soft);
+  --color-background-gray: var(--color-raw-gray);
+  --color-background-mute: var(--color-raw-white-mute);
+  
+  --color-accent: var(--color-raw-orange);
+  --color-accent-rgb: 228, 122, 0;
+  --color-accent-light: var(--color-raw-orange-light);
+  --color-accent-light-rgb: 255, 179, 92;
+  --color-accent-second: var(--color-raw-orange-second);
+  --color-accent-second-rgb: 150, 80, 0;
+
+  --color-font: var(--color-raw-black);
+  --color-font-rgb: 0, 0, 0;
+  --color-font-reverse: var(--color-raw-white);
+  --color-font-reverse-rgb: 255, 255, 255;
+}
+
+[data-theme="dark"] {
+  --color-background-light: var(--color-raw-black-soft);
+  --color-background: var(--color-raw-black-dull);
+  --color-background-soft: var(--color-black);
+  --color-background-gray: var(--color-raw-gray);
+  --color-background-mute: var(--color-raw-black-mute);
+
+  --color-font: var(--color-raw-white);
+  --color-font-rgb: 255, 255, 255;
+  --color-font-reverse: var(--color-raw-black);
+  --color-font-reverse-rgb: 0, 0, 0;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  /* min-height: 100vh; */
+  color: var(--color-font);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  background: var(--color-background);
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
