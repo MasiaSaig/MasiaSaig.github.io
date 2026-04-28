@@ -1,65 +1,67 @@
 <template>
-  <div class="wrap">
-    <header>
-      <div class="title-group">
-        <h1>Raport Prac</h1>
-        <small>Trzy kolumny: <strong>Data</strong>, <strong>Godziny</strong>, <strong>Opis</strong>. Wyeksportuj do PDF.</small>
-      </div>
-      <div class="toolbar">
-        <button @click="exportPdf()" title="Download PDF (A4)">Pobierz PDF</button>
-        <!-- <button class="secondary" id="sampleBtn" title="Add sample rows">Dodan przykładowe wiersze</button> -->
-        <button class="danger" @click="clearEntries()" title="Remove all rows">Wyczyść wszystko</button>
-      </div>
-    </header>
+  <div class="raport-generator-wrapper">
+    <div class="wrap">
+      <header>
+        <div class="title-group">
+          <h1>Raport Prac</h1>
+          <small>Trzy kolumny: <strong>Data</strong>, <strong>Godziny</strong>, <strong>Opis</strong>. Wyeksportuj do PDF.</small>
+        </div>
+        <div class="toolbar">
+          <button @click="exportPdf()" title="Download PDF (A4)">Pobierz PDF</button>
+          <!-- <button class="secondary" id="sampleBtn" title="Add sample rows">Dodan przykładowe wiersze</button> -->
+          <button class="danger" @click="clearEntries()" title="Remove all rows">Wyczyść wszystko</button>
+        </div>
+      </header>
 
-    <section class="card" style="margin-bottom: 16px;" aria-label="Add entry">
-      <form @submit="generatePdf($event)">
-        <div>
-          <label for="date">Data [DD-MM-YYYY]</label>
-          <input ref="date" name="date" type="date" required />
-        </div>
-        <div>
-          <label for="hours">Godziny</label>
-          <input ref="hours" name="hours" type="number" step="0.25" min="0" placeholder="np. 1.5" required />
-        </div>
-        <div>
-          <label for="desc">Opis</label>
-          <textarea ref="desc" id="desc" name="desc" placeholder="Co zrobiłeś/aś?" required></textarea>
-        </div>
-        <div style="align-self: end;">
-          <button type="submit" class="btn">Dodaj</button>
-        </div>
-      </form>
-    </section>
+      <section class="card" style="margin-bottom: 16px;" aria-label="Add entry">
+        <form @submit="generatePdf($event)">
+          <div>
+            <label for="date">Data [DD-MM-YYYY]</label>
+            <input ref="date" name="date" type="date" required />
+          </div>
+          <div>
+            <label for="hours">Godziny</label>
+            <input ref="hours" name="hours" type="number" step="0.25" min="0" placeholder="np. 1.5" required />
+          </div>
+          <div>
+            <label for="desc">Opis</label>
+            <textarea ref="desc" id="desc" name="desc" placeholder="Co zrobiłeś/aś?" required></textarea>
+          </div>
+          <div style="align-self: end;">
+            <button type="submit" class="btn">Dodaj</button>
+          </div>
+        </form>
+      </section>
 
-    <section class="card" aria-label="Entries">
-      <div class="table-wrap">
-        <table id="entriesTable">
-          <thead>
-            <tr>
-              <th style="width: 140px">Data</th>
-              <th style="width: 110px">Godziny</th>
-              <th>Opis</th>
-              <th style="width: 80px; text-align:right;">Akcje</th>
-            </tr>
-          </thead>
-          <tbody ref="tbody">
-            <!-- Rows render here -->
-          </tbody>
-        </table>
-      </div>
-      <div class="summary">
-        <div class="badge" ref="rangeBadge">Brak wpisów</div>
-        <div class="sum">Suma godzin: <span ref="total">0.00</span></div>
-      </div>
-    </section>
+      <section class="card" aria-label="Entries">
+        <div class="table-wrap">
+          <table id="entriesTable">
+            <thead>
+              <tr>
+                <th style="width: 140px">Data</th>
+                <th style="width: 110px">Godziny</th>
+                <th>Opis</th>
+                <th style="width: 80px; text-align:right;">Akcje</th>
+              </tr>
+            </thead>
+            <tbody ref="tbody">
+              <!-- Rows render here -->
+            </tbody>
+          </table>
+        </div>
+        <div class="summary">
+          <div class="badge" ref="rangeBadge">Brak wpisów</div>
+          <div class="sum">Suma godzin: <span ref="total">0.00</span></div>
+        </div>
+      </section>
 
-    <p class="notice">Tip: Użyj klawisza <strong>tab</strong>, aby poruszać się pomiędzy polami. Dane są zapisywane lokalnie w przeglądarce.</p>
+      <p class="notice">Tip: Użyj klawisza <strong>tab</strong>, aby poruszać się pomiędzy polami. Dane są zapisywane lokalnie w przeglądarce.</p>
+    </div>
+
+    <footer class="notice wrap">
+      <p>Stworzone przez <a href="https://github.com/MasiaSaig">MasiaSaig</a></p>
+    </footer>
   </div>
-
-  <footer class="notice wrap">
-    <p>Stworzone przez <a href="https://github.com/MasiaSaig">MasiaSaig</a></p>
-  </footer>
 </template>
 
 <script setup lang="ts">
@@ -266,20 +268,6 @@ async function exportPdf() {
   --ring: rgba(92,200,255,.35);
   --ok: #1ec28b;
 }
-</style>
-<style scoped>
-.wrap {
-  height: 100%; max-width: 980px; margin: 40px auto; padding: 0 16px;
-  margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1000px 800px at 20% -20%, #142036, transparent),
-              radial-gradient(800px 600px at 120% 0%, #0e2336, transparent),
-              var(--bg);
-  color: var(--ink);
-  line-height: 1.4;
-}
-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-h1 { font-size: 1.6rem; margin: 0; letter-spacing: .3px; }
-.toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
 button, .btn {
   appearance: none; border: 0; border-radius: 12px; padding: 10px 14px; font-weight: 600; cursor: pointer;
   color: #061018; background: var(--accent); box-shadow: 0 6px 16px rgba(92,200,255,.25);
@@ -289,8 +277,23 @@ button.secondary { background: #243049; color: var(--ink); box-shadow: inset 0 0
 button.danger { background: var(--danger); color: #21070b; }
 button:active { transform: translateY(1px); box-shadow: 0 2px 10px rgba(92,200,255,.2); }
 .card { background: linear-gradient(180deg, #121824 0%, #0f1420 100%); border: 1px solid #1b2334; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+</style>
 
-/* Form */
+<style scoped>
+.raport-generator-wrapper {
+  height: 100%;
+  min-height: 100dvh;
+  margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1000px 800px at 20% -20%, #142036, transparent),
+              radial-gradient(800px 600px at 120% 0%, #0e2336, transparent),
+              var(--bg);
+  color: var(--ink);
+  line-height: 1.4;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding: 32px 16px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+h1 { font-size: 1.6rem; margin: 0; letter-spacing: .3px; }
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
 form { display: grid; grid-template-columns: 1fr 1fr 2fr auto; gap: 10px; padding: 16px; align-items: start; }
 label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 6px; }
 input, textarea, select {
