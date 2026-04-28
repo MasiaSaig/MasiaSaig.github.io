@@ -9,7 +9,6 @@
 
       <div class="flex ml-auto">
         <div class="max-[300px]:hidden contact-buttons flex gap-3 items-center">
-          <!-- <ButtonThemeChange class="animate__animated animate__fadeIn mr-4" style="--order: 2" /> -->
           <ButtonLinkedin class="max-[400px]:hidden" data-aos="fade-in" data-aos-anchor="#AboutMe" data-aos-delay="200" />
           <ButtonGithub class="max-[400px]:hidden" data-aos="fade-in" data-aos-anchor="#AboutMe" data-aos-delay="100" />
           <ButtonThemeChange class="max-[300px]:hidden p-[4px] animate__animated animate__fadeIn" />
