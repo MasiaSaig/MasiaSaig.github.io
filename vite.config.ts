@@ -11,7 +11,7 @@ import svgLoader from 'vite-svg-loader'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // base: '/masiasaig.github.io/',
+  base: '/masiasaig.github.io/',
   plugins: [
     vue({
       template: {

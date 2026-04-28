@@ -19,6 +19,5 @@ AOS.init({
   offset: 200,
 })
 
-app.use(AOS)
 app.use(pinia)
 app.mount('#app')
