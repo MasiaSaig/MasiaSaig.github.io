@@ -14,11 +14,11 @@ export default defineConfig({
   base: '/',
   plugins: [
     vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: tag => tag === 'css-doodle'
-        }
-      }
+      // template: {
+      //   compilerOptions: {
+      //     isCustomElement: tag => tag === 'css-doodle'
+      //   }
+      // }
     }),
     vueJsx(),
     vueDevTools(),
