@@ -1,11 +1,15 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
-import Home from './views/Home.vue'
-import RaportGenerator from './views/RaportGenerator.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/raport-generator', component: RaportGenerator }
+  { 
+    path: '/',
+    component: () => import('./views/Home.vue')
+  },
+  {
+    path: '/raport-generator',
+    component: () => import('./views/RaportGenerator.vue')
+  }
 ]
 
 export const router = createRouter({
