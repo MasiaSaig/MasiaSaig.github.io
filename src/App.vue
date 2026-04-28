@@ -5,7 +5,7 @@
     <div class="max-w-5xl m-auto">
       <Introduction />
       <AboutMe />
-      <Skills />
+      <Skills class="md:my-0 my-16" />
     </div>
 
     <div id="popups"></div>

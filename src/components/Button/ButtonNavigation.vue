@@ -1,15 +1,57 @@
 <template>
-  <a class="navigation-button" :href="`#${label}`">
+  <button
+    class="navigation-button"
+    :class="{ active: useGetArticleID(label) === activeArticle }"
+    :href="`#${useGetArticleID(label)}`"
+    @click="scrollTo(useGetArticleID(label))"
+  >
     <span>{{ label }}</span>
-  </a>
+  </button>
 </template>
 
 <script setup lang="ts">
+import { useArticleStore, useGetArticleID } from '@/composables/useArticles';
+
 withDefaults(defineProps<{
   label?: string
 }>(), {
   label: ''
 })
+
+const articles = useArticleStore();
+const activeArticle = ref<string | null>(null);
+let observer: IntersectionObserver | null = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeArticle.value = entry.target.id
+        }
+      })
+    },
+    {
+      rootMargin: '-20% 0px -50% 0px', // tweak for when section counts as "active"
+      threshold: 0,
+    }
+  )
+
+  articles.articles.forEach((article) => {
+    const el = document.getElementById(useGetArticleID(article))
+    if (el) observer!.observe(el)
+  })
+})
+
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect()
+})
+
+function scrollTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: 'smooth',
+  })
+}
 </script>
 
 <style lang="scss">
@@ -17,7 +59,6 @@ withDefaults(defineProps<{
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 8px;
   transition: all 0.3s ease-in-out;
   border-style: solid;
   border-color: var(--color-accent);
@@ -40,6 +81,13 @@ withDefaults(defineProps<{
   
   &:hover {
     color: var(--color-accent);
+  }
+
+  &.active {
+    color: var(--color-accent);
+    &::after {
+      width: 100%;
+    }
   }
 }
 

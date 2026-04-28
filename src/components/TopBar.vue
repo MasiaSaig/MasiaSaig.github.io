@@ -3,7 +3,7 @@
     <div class="topbar max-w-5xl mx-auto relative">
       <Logo />
 
-      <div class="navigation-links flex items-center max-md:hidden">
+      <div class="navigation-links flex gap-2 items-center max-md:hidden">
         <ButtonNavigation v-for="(item, index) in articles.articles" :key="index" :label="item" />
       </div>
 

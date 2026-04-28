@@ -46,3 +46,8 @@ npm run build
 ```sh
 npm run lint
 ```
+
+# Deploy by pushing /dist to branch gh-pages
+```sh
+git subtree push -P dist origin gh-pages
+```

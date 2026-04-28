@@ -4,6 +4,10 @@ interface ArticleState {
   articles: string[]
 }
 
+export function useGetArticleID (article: string) {
+  return article.replace(' ', '');
+}
+
 export const useArticleStore = defineStore('articles', {
   state: (): ArticleState => ({
     articles: []

@@ -15,10 +15,8 @@
       </h2>
       <div class="skills-side">
         <IconGit />
-        <!-- <ImageDef src="/skills/linux.svg" /> -->
         <ImageDef src="/skills/postgresql.svg" />
         <ImageDef src="/skills/qt.svg" />
-        <!-- <ImageDef src="/skills/cmake.svg" /> -->
         <ImageDef src="/skills/sql.svg" />
       </div>
     </div>
@@ -76,8 +74,8 @@ const calculateAnimationDelay = (index: number, initialDelay: number = 100, diff
   const even: boolean = (row % 2) === 0;
 
   const columnDelay: number = even ? col * diff : (numberOfCols - col - 1) * diff;
-  const rowDelay: number = row * (numberOfCols) * diff;
-  return initialDelay + columnDelay + rowDelay;
+  // const rowDelay: number = row * (numberOfCols) * diff;
+  return initialDelay + columnDelay;
 }
 </script>
 

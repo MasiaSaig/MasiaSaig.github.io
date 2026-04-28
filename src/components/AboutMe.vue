@@ -1,7 +1,7 @@
 <template>
-  <WrapperText :active="true">
+  <WrapperText>
     <ContentDecorator :show-top="false">
-      <Header label="About Me" article-name="AboutMe" class="mb-4" />
+      <Header label="About Me" class="mb-4" />
     </ContentDecorator>
 
     <span>

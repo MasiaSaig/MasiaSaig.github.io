@@ -31,7 +31,7 @@
 .line {
   fill:none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke:#000;
+  stroke: var(--color-font);
   stroke-width:5.5;
   stroke-linecap:round;
 }
