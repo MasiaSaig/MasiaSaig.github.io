@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-4 w-full p-2 md:flex-row mb-8">
     <div class="flex flex-col justify-center w-full md:w-[40%]">
       <ContentDecorator>
-        <Header label="Skills" />
+        <Header :label="articles[2]!.label" :article-name="articles[2]!.id" />
       </ContentDecorator>
 
       <p>
@@ -49,6 +49,7 @@
 </template>
 
 <script setup lang="ts">
+import { articles } from '@/composables/useArticlesArray';
 interface MainSkill {src: string, label: string}
 
 const mainSkills: readonly MainSkill[] = [

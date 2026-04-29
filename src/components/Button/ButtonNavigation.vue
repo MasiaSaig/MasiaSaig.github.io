@@ -1,24 +1,26 @@
 <template>
   <button
     class="navigation-button"
-    :class="{ active: useGetArticleID(label) === activeArticle }"
-    :href="`#${useGetArticleID(label)}`"
-    @click="scrollTo(useGetArticleID(label))"
+    :class="{ active: id === activeArticle }"
+    :href="`#${id}`"
+    @click="scrollTo(id)"
   >
     <span>{{ label }}</span>
   </button>
 </template>
 
 <script setup lang="ts">
-import { useArticleStore, useGetArticleID } from '@/composables/useArticles';
+// import { useArticleStore, useGetArticleID } from '@/composables/useArticles';
+import { articles } from '@/composables/useArticlesArray';
 
 withDefaults(defineProps<{
+  id: string,
   label?: string
 }>(), {
   label: ''
 })
 
-const articles = useArticleStore();
+// const articles = useArticleStore();
 const activeArticle = ref<string | null>(null);
 let observer: IntersectionObserver | null = null;
 
@@ -37,8 +39,8 @@ onMounted(() => {
     }
   )
 
-  articles.articles.forEach((article) => {
-    const el = document.getElementById(useGetArticleID(article))
+  articles.forEach((article) => {
+    const el = document.getElementById(article.id)
     if (el) observer!.observe(el)
   })
 })

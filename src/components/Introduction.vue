@@ -4,7 +4,7 @@
 
     <ContentDecorator class="lg:w-[50%] w-full">
       
-      <Header label="Maciej Müller" article-name="Introduction" />
+      <Header label="Maciej Müller" :article-name="articles[0]!.id" />
       <div class="flex gap-2 pb-[4px]">
         <ButtonLinkedin class="size-10 animate__animated animate__pulse animate__delay-2s animate_slow" />
         <ButtonGithub class="size-10 animate__animated animate__pulse animate__delay-2s animate_slow" />
@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { articles } from '@/composables/useArticlesArray';
 const dandelionsOffset = ref<number>(0);
 
 const scrollPosition = ref<number>(0);

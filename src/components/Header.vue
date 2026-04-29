@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { useArticleStore, useGetArticleID } from '@/composables/useArticles';
+// import { useArticleStore, useGetArticleID } from '@/composables/useArticles';
 
 const props = withDefaults(defineProps<{
   label?: string,
@@ -14,8 +14,8 @@ const props = withDefaults(defineProps<{
   label: ''
 });
 
-const headerID = useGetArticleID(props.articleName ?? props.label);
-// By default add label to articles.
-const articles = useArticleStore();
-articles.add(props.articleName ?? props.label)
+const headerID = props.articleName ?? props.label;
+// // By default add label to articles.
+// const articles = useArticleStore();
+// articles.add(props.articleName ?? props.label)
 </script>

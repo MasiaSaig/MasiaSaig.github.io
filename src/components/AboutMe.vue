@@ -1,7 +1,7 @@
 <template>
   <WrapperText>
     <ContentDecorator :show-top="false">
-      <Header label="About Me" class="mb-4" />
+      <Header :label="articles[1]!.label" :article-name="articles[1]!.id" class="mb-4" />
     </ContentDecorator>
 
     <span>
@@ -19,3 +19,7 @@
     </span>
   </WrapperText>
 </template>
+
+<script lang="ts" setup>
+import { articles } from '@/composables/useArticlesArray';
+</script>

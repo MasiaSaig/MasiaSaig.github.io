@@ -1,16 +1,17 @@
 <template>
   <div>
-    <ButtonBurger @click="toggleMenu()" class="size-[48px]" />
+    <ButtonBurger v-model="showMenu" @click="toggleMenu()" class="size-[48px]" />
 
     <Modal v-model="showMenu" class="md:hidden top-[64px] right-0 inset-0 transition-all duration-300 linear">
       <div class="articles p-4 flex flex-col gap-2">
         <a
-          v-for="(article, index) in articles.articles" :key="index"
-          :href="`#${article}`"
+          v-for="(article, index) in articles" :key="index"
+          :href="`#${article.id}`"
           class="animate__animated animate__fadeInDown"
           :style="`--order: ${index}`"
+          @click="toggleMenu()"
         >
-          {{ article }}
+          {{ article.label }}
         </a>
       </div>
 
@@ -26,14 +27,15 @@
 </template>
 
 <script setup lang="ts">
-import { useArticleStore } from '@/composables/useArticles';
+// import { useArticleStore } from '@/composables/useArticles';
+import { articles } from '@/composables/useArticlesArray';
 
 const showMenu = ref<boolean>(false);
 function toggleMenu () {
   showMenu.value = !showMenu.value
 }
 
-const articles = useArticleStore();
+// const articles = useArticleStore();
 </script>
 
 <style scoped>
