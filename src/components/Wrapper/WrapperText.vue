@@ -1,7 +1,7 @@
 <template>
-  <ScrollableContent class="about-container shadow-md rounded-xl p-4 max-h-full shadow-md">
+  <div class="about-container shadow-md rounded-xl p-4 max-h-full shadow-md">
     <slot />
-  </ScrollableContent>
+  </div>
 </template>
 
 <script lang="ts" setup>
