@@ -2,7 +2,7 @@
   <header class="ease-linear duration-300 px-6 pt-6 pb-2 max-md:px-4 max-md:pt-2 top-0 shadow-md animate__animated animate__slideInDown">
     <div class="topbar max-w-5xl mx-auto relative">
       <Logo />
-      <!-- <RouterLink to="/raport-generator">&nbsp;&nbsp;</RouterLink> -->
+      <RouterLink to="/raport-generator">&nbsp;&nbsp;</RouterLink>
 
       <div class="navigation-links flex gap-2 items-center max-md:hidden">
         <ButtonNavigation v-for="(item, index) in articles.articles" :key="index" :label="item" />
